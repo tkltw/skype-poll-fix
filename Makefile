@@ -8,6 +8,7 @@ endif
 ifeq ($(OS),Darwin)
 	@echo "Building Darwing shared-library skype-poll-fix.dylib..."
 	$(CC) -arch i386 -arch x86_64 -shared -O2 -ldl -o skype-poll-fix.dylib skype-poll-fix.c
+	$(CC) -O2 -o Skype Skype.c
 endif
 
 .PHONY: clean
